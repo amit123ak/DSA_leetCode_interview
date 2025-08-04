@@ -1,0 +1,34 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+
+        String  haystack = "sadbutsad";
+        String needle = "sad";
+       System.out.println(findFIrstOrrcence(haystack,needle));
+
+    }
+    
+   public static int  findFIrstOrrcence(String hay,String ne)
+    {
+        String haystack=hay;
+        String needle=ne;
+        
+        for(int i=0;i<=haystack.length()-needle.length();i++)
+        {
+            if(haystack.charAt(i)==needle.charAt(0))
+            {
+       if(haystack.substring(i,i+needle.length()).equals(needle))
+       {
+           
+           return i;
+       }
+                
+            }
+            
+        }
+        
+        return -1;
+    }
+}
